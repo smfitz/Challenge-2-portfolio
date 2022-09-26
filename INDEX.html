@@ -10,22 +10,22 @@
 
   <body>
     <nav class="top-right">
-      <a href="#">About Me</a>
-      <a href="#">My Work</a>
-      <a href="#">Contact Me</a>
+      <a href="#about-me">About Me</a>
+      <a href="#my-work">My Work</a>
+      <a href="#contact-me">Contact Me</a>
     </nav>
 
     <main>
      <header>
         <h1>My Portfolio</h1>
      </header>
-     <section class="about-me">
+     <section id="about-me" class="about-me">
         <div class="about-me-container">
             <div class="profile-image">
             <h2>About Me</h2>
             <p> - My name is Sean Fitzpatrick I am a studnt at the UNC Coding Bootcamp.</p>
             <img src="./Resources/images/portfoliopfp.jpeg" alt="headshot-of-me" class="profile-image">
-            <p>Here are some other activities I enjoy ouside of class:</p>
+            <p> - Here are some other activities I enjoy ouside of class:</p>
             </div>
         </div>
      </section>
@@ -57,20 +57,35 @@
             </div>
         </div>
      </section> 
-
-        <section class="my-work">
+        <section>
+        <div id="my-work" class="my-work">
         </div>
           <h2>My Work</h2>
-          <p>Here is a link to my github that shows some of the work I have done so far.</p>
+          <p>Here's a link to some of the work I have completed so far.</p>
+          <a href="https://github.com/smfitz"><strong>github</strong></a>     
+        </div>
         </div>
         </section>
         <section>
-            <div class="contact-me">
+            <div id="contact-me" class="contact-me">
                 <h2>Contact Me</h2>
+                <div class="container">
+                    <form action="action_page.php">
+                  
+                      <label for="fname">First Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  
+                      <label for="lname">Last Name</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">                  
+                      <label for="subject">Subject</label>
+                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                  
+                      <input type="submit" value="Submit">
+                  
+                    </form>
+                  </div>
             </div>
         </section>
-
-      </section>
 
 
     </main>

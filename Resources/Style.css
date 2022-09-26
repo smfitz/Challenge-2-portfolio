@@ -3,7 +3,7 @@ body{
    background-color: cornsilk;
 }
 
-h1,h2,h3,h4,h5,h6,p,nav,div{
+h1,h2,h3,h4,h5,h6,p,nav,div,a{
     font-family: 'Courier New', Courier, monospace;
     color: navy;
 }
@@ -48,8 +48,19 @@ p{
     text-indent: 1%;
 }
 
+a{
+    text-decoration: none;
+    padding: 20px;
+}
+
+a:visited{
+    text-decoration: none;
+    padding: 20px;
+}
+
 /* all of this nav bar code was based off source code from this article https://webdevtrick.com/html-css-navigation-bar/ */
 /* this section styles nav bar on top right */
+
 .top-right li {
     float: left;
     width: 20%;
@@ -68,7 +79,7 @@ p{
     position: relative;
 }
 .top-right a:hover {
-    color: navy;
+    color: white;
 }
 
 .top-right a:hover::before {
@@ -116,7 +127,12 @@ hopefully in the future I can add this feature to my portfolio */
     transition: .5s ease;
     backface-visibility: hidden;
 }
-  
+
+.profile-image{
+    padding: 15px;
+    border-radius: 15px;
+}
+
 .middle {
     transition: .5s ease;
     opacity: 0;
@@ -144,3 +160,59 @@ hopefully in the future I can add this feature to my portfolio */
 }
 
 
+/* This styling is for the github link
+code based off of W3 schools template */
+
+a:link, a:visited {
+    background-color: rgb(94, 191, 191);
+    color: navy;
+    border: 2px solid navy;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: green;
+    color: white;
+  }
+
+  /* CSS styling for the contact form at the bottom of the page
+  this was all referenced from w3 schools. https://www.w3schools.com/css/css_link.asp */
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid navy; 
+    border-radius: 8px;
+    box-sizing: border-box; 
+    margin-top: 5px; 
+    margin-bottom: 12px; 
+    background-color: cornsilk;
+  }
+  
+
+  input[type=submit] {
+    background-color: rgb(94, 191, 191);
+    color: navy;
+    padding: 12px 20px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: green;
+    border: 2px solid navy;
+  }
+
+  .container {
+    border-radius: 10px;
+    background-color: cornsilk;
+    padding: 20px;
+  }
+
+  /* This styles the UI scrolling */
+
+  html {
+    scroll-behavior: smooth;
+  }
