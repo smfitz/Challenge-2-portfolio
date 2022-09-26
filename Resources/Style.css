@@ -20,8 +20,9 @@ h2{
 }
 
 img{
-    border-radius: 10px;
-    width: 20%;
+    border-radius: 15px;
+    width: 15%;
+    height: auto;
 }
 
 nav {
@@ -41,6 +42,10 @@ footer{
     bottom: 0;
     right: 0;
     padding: 1%;
+}
+
+p{
+    text-indent: 1%;
 }
 
 /* all of this nav bar code was based off source code from this article https://webdevtrick.com/html-css-navigation-bar/ */
@@ -75,25 +80,67 @@ li {
    list-style: none;
 }
 
-/* Flexboxing for list nect to pfp */
-/* Sourced from W3 schools */
+/* This section adds overlay features to the about me images */
+/* I used W3 to understand most of how to make this effect work */
+/* Because this is one page I did not add a feature that would
+take you to a seperate page when clicking on image but 
+hopefully in the future I can add this feature to my portfolio */
 
-.about-me-container {
+.row {
     display: flex;
-    align-items: center;
-    justify-content: left;
-}
- 
-img{
-    max-width: 100%;
+    flex-direction: row;
 }
 
-.profile-image {
-    flex-basis: 100%
+.column {
+    flex: 33.33%;
+    padding: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
 }
   
-.about-me-text {
-    font-size: 14px;
-    padding-left: 0px;
-    flex: 1 0 33%;
+.image {
+    display: flex;  
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
+  
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+  
+.container:hover .image {
+    opacity: 0.3;
+}
+  
+.container:hover .middle {
+    opacity: 1;
+}
+  
+.text {
+    background-color: navy;
+    color: cornsilk;
+    font-size: 16px;
+    padding: 8px 16px;
+    text-align: center;
+}
+
+
