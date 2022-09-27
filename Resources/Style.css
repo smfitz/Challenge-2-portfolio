@@ -104,7 +104,7 @@ hopefully in the future I can add this feature to my portfolio */
 
 .column {
     flex: 33.33%;
-    padding: 50px;
+    padding: 20px;
 }
 
 @media screen and (max-width: 500px) {
@@ -198,11 +198,13 @@ a:link, a:visited {
     color: navy;
     padding: 12px 20px;
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
   }
   
   input[type=submit]:hover {
     background-color: green;
     border: 2px solid navy;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   .container {
